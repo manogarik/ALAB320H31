@@ -1,11 +1,16 @@
 import React from "react";
-export default function Score({name,bio})
+export default function Score({scores})
 {
     return(
         <div>
-            <h3>{date}</h3>
-            <p>score:{score}</p>
-            <Score/>
+            {
+                scores.map((entry,index)=>
+                {
+                    <li key={index}>
+                        {entry.date}:{entry.score}
+                    </li>
+                })
+            }
         </div>
     )
 }

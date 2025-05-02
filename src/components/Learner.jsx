@@ -1,11 +1,14 @@
 import React from "react";
-export default function Learner({name,bio})
+import Score from "../components/Score.jsx";
+
+export default function Learner({name,bio,scores})
 {
     return(
         <div>
             <h3>{name}</h3>
             <p>bio:{bio}</p>
-            <Score/>
+            <h4>Scores</h4>
+            <Score scores = {scores}/>
         </div>
     )
 }
