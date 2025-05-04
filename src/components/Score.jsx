@@ -3,14 +3,15 @@ export default function Score({scores})
 {
     return(
         <div>
-            {
-                scores.map((entry,index)=>
+            
                 {
-                    <li key={index}>
-                        {entry.date}:{entry.score}
+                scores.map((entry,index)=>(
+                
+                    <li>
+                        Date {entry.date} : Score {entry.score}
                     </li>
-                })
-            }
+                ))}
+            
         </div>
     )
 }
